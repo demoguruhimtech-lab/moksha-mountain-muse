@@ -1,13 +1,15 @@
-import exteriorDay from "@/assets/moksha-exterior-day.asset.json";
-import roomWindow from "@/assets/moksha-room-window.asset.json";
-import roomWarm from "@/assets/moksha-room-warm.asset.json";
-import cottagesNight from "@/assets/moksha-cottages-night.asset.json";
-import foodSunset from "@/assets/moksha-food-sunset.asset.json";
-import viewSign from "@/assets/moksha-view-sign.asset.json";
-import breakfastView from "@/assets/moksha-breakfast-view.asset.json";
-import roomMaster from "@/assets/moksha-room-master.asset.json";
-import bathroom from "@/assets/moksha-bathroom.asset.json";
-import mountainClouds from "@/assets/moksha-mountain-clouds.asset.json";
+import {
+  bathroom,
+  breakfastView,
+  cottagesNight,
+  exteriorDay,
+  foodSunset,
+  mountainClouds,
+  roomMaster,
+  roomWarm,
+  roomWindow,
+  viewSign,
+} from "@/assets/moksha-images";
 
 export const contactInfo = {
   phone: "08920636125",
@@ -56,7 +58,7 @@ export const rooms = [
     price: "From ₹4,500 / night",
     summary: "A quiet cedar-lined retreat with warm lighting, crisp bedding, and forest views.",
     features: ["King Bed", "Forest Outlook", "Modern Bathroom", "Heated Water"],
-    images: [roomWindow.url, roomWarm.url, bathroom.url],
+    images: [roomWindow, roomWarm, bathroom],
   },
   {
     name: "Wooden Cottage",
@@ -65,7 +67,7 @@ export const rooms = [
     price: "From ₹6,500 / night",
     summary: "A handcrafted cottage experience framed by mountain air and private outdoor seating.",
     features: ["Private Deck", "Premium Interiors", "Wide Windows", "Bonfire Access"],
-    images: [exteriorDay.url, roomMaster.url, roomWindow.url],
+    images: [exteriorDay, roomMaster, roomWindow],
   },
   {
     name: "Luxury Cottage",
@@ -74,7 +76,7 @@ export const rooms = [
     price: "From ₹8,500 / night",
     summary: "An elevated stay with designer wood interiors, generous space, and sunset-ready vistas.",
     features: ["Luxury Bedding", "Panoramic View", "Curated Lighting", "Fine Bath Amenities"],
-    images: [roomMaster.url, roomWarm.url, exteriorDay.url],
+    images: [roomMaster, roomWarm, exteriorDay],
   },
   {
     name: "Duplex Cottage",
@@ -83,7 +85,7 @@ export const rooms = [
     price: "From ₹11,000 / night",
     summary: "A larger family-friendly mountain stay designed for layered comfort and cinematic mornings.",
     features: ["Family Layout", "Lounge Nook", "Large Windows", "Scenic Privacy"],
-    images: [viewSign.url, roomMaster.url, breakfastView.url],
+    images: [viewSign, roomMaster, breakfastView],
   },
   {
     name: "Rock Cottage",
@@ -92,7 +94,7 @@ export const rooms = [
     price: "From ₹12,500 / night",
     summary: "A moodier, more secluded escape that brings together raw mountain character and soft luxury.",
     features: ["Signature Setting", "Premium Finishes", "Stone + Wood Palette", "Night Ambience"],
-    images: [cottagesNight.url, mountainClouds.url, roomWarm.url],
+    images: [cottagesNight, mountainClouds, roomWarm],
   },
 ] as const;
 
@@ -100,32 +102,32 @@ export const experiences = [
   {
     title: "Bonfire Nights",
     description: "Slow conversations, glowing embers, and a valley sky filled with stars.",
-    image: cottagesNight.url,
+    image: cottagesNight,
   },
   {
     title: "Nature Walks",
     description: "Guided walks through pine forests, riverside trails, and hidden village paths.",
-    image: mountainClouds.url,
+    image: mountainClouds,
   },
   {
     title: "Chalal Trek",
     description: "A signature local trek with atmospheric bridges, cafés, and mountain air.",
-    image: exteriorDay.url,
+    image: exteriorDay,
   },
   {
     title: "Photography Escapes",
     description: "Golden-hour frames, dramatic peaks, and beautifully textured wooden architecture.",
-    image: viewSign.url,
+    image: viewSign,
   },
   {
     title: "Riverside Calm",
     description: "Fresh mornings and the steady rhythm of water near the valley floor.",
-    image: breakfastView.url,
+    image: breakfastView,
   },
   {
     title: "Cafe Dining",
     description: "Comfort food, warm drinks, and intimate mountain meals with a view.",
-    image: foodSunset.url,
+    image: foodSunset,
   },
 ] as const;
 
@@ -208,16 +210,16 @@ export const faqs = [
 ] as const;
 
 export const galleryImages = [
-  { src: exteriorDay.url, alt: "A row of wooden Moksha Cottages with mountains behind", category: "Nature" },
-  { src: roomWindow.url, alt: "Luxury wooden room with large windows and premium bedding", category: "Rooms" },
-  { src: roomWarm.url, alt: "Warm wood-lined cottage bedroom with ambient lighting", category: "Rooms" },
-  { src: cottagesNight.url, alt: "Moksha cottages illuminated at night with glowing rooflines", category: "Bonfire" },
-  { src: foodSunset.url, alt: "Signature meal served with blurred cottage view at sunset", category: "Food" },
-  { src: viewSign.url, alt: "Balcony view of Moksha sign and mountain valley", category: "Mountain" },
-  { src: breakfastView.url, alt: "Breakfast plate held in front of forested mountain view", category: "Food" },
-  { src: roomMaster.url, alt: "Premium master bedroom inside Moksha Cottage", category: "Rooms" },
-  { src: bathroom.url, alt: "Modern bathroom inside Moksha Cottage", category: "Rooms" },
-  { src: mountainClouds.url, alt: "Dramatic mountain and pine forest view near Moksha Cottages", category: "Nature" },
+  { src: exteriorDay, alt: "A row of wooden Moksha Cottages with mountains behind", category: "Nature" },
+  { src: roomWindow, alt: "Luxury wooden room with large windows and premium bedding", category: "Rooms" },
+  { src: roomWarm, alt: "Warm wood-lined cottage bedroom with ambient lighting", category: "Rooms" },
+  { src: cottagesNight, alt: "Moksha cottages illuminated at night with glowing rooflines", category: "Bonfire" },
+  { src: foodSunset, alt: "Signature meal served with blurred cottage view at sunset", category: "Food" },
+  { src: viewSign, alt: "Balcony view of Moksha sign and mountain valley", category: "Mountain" },
+  { src: breakfastView, alt: "Breakfast plate held in front of forested mountain view", category: "Food" },
+  { src: roomMaster, alt: "Premium master bedroom inside Moksha Cottage", category: "Rooms" },
+  { src: bathroom, alt: "Modern bathroom inside Moksha Cottage", category: "Rooms" },
+  { src: mountainClouds, alt: "Dramatic mountain and pine forest view near Moksha Cottages", category: "Nature" },
 ] as const;
 
 export const instagramMoments = [galleryImages[0], galleryImages[4], galleryImages[5], galleryImages[9]];
