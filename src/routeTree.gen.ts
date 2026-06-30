@@ -9,8 +9,86 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TestimonialsRouteImport } from './routes/testimonials'
+import { Route as RoomsRouteImport } from './routes/rooms'
+import { Route as RestaurantRouteImport } from './routes/restaurant'
+import { Route as OffersRouteImport } from './routes/offers'
+import { Route as NearbyAttractionsRouteImport } from './routes/nearby-attractions'
+import { Route as KasolRouteImport } from './routes/kasol'
+import { Route as JibhiRouteImport } from './routes/jibhi'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as ExperiencesRouteImport } from './routes/experiences'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BookNowRouteImport } from './routes/book-now'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TestimonialsRoute = TestimonialsRouteImport.update({
+  id: '/testimonials',
+  path: '/testimonials',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RoomsRoute = RoomsRouteImport.update({
+  id: '/rooms',
+  path: '/rooms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RestaurantRoute = RestaurantRouteImport.update({
+  id: '/restaurant',
+  path: '/restaurant',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OffersRoute = OffersRouteImport.update({
+  id: '/offers',
+  path: '/offers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NearbyAttractionsRoute = NearbyAttractionsRouteImport.update({
+  id: '/nearby-attractions',
+  path: '/nearby-attractions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KasolRoute = KasolRouteImport.update({
+  id: '/kasol',
+  path: '/kasol',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JibhiRoute = JibhiRouteImport.update({
+  id: '/jibhi',
+  path: '/jibhi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperiencesRoute = ExperiencesRouteImport.update({
+  id: '/experiences',
+  path: '/experiences',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookNowRoute = BookNowRouteImport.update({
+  id: '/book-now',
+  path: '/book-now',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +97,214 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-now': typeof BookNowRoute
+  '/contact': typeof ContactRoute
+  '/experiences': typeof ExperiencesRoute
+  '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
+  '/jibhi': typeof JibhiRoute
+  '/kasol': typeof KasolRoute
+  '/nearby-attractions': typeof NearbyAttractionsRoute
+  '/offers': typeof OffersRoute
+  '/restaurant': typeof RestaurantRoute
+  '/rooms': typeof RoomsRoute
+  '/testimonials': typeof TestimonialsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-now': typeof BookNowRoute
+  '/contact': typeof ContactRoute
+  '/experiences': typeof ExperiencesRoute
+  '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
+  '/jibhi': typeof JibhiRoute
+  '/kasol': typeof KasolRoute
+  '/nearby-attractions': typeof NearbyAttractionsRoute
+  '/offers': typeof OffersRoute
+  '/restaurant': typeof RestaurantRoute
+  '/rooms': typeof RoomsRoute
+  '/testimonials': typeof TestimonialsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-now': typeof BookNowRoute
+  '/contact': typeof ContactRoute
+  '/experiences': typeof ExperiencesRoute
+  '/faq': typeof FaqRoute
+  '/gallery': typeof GalleryRoute
+  '/jibhi': typeof JibhiRoute
+  '/kasol': typeof KasolRoute
+  '/nearby-attractions': typeof NearbyAttractionsRoute
+  '/offers': typeof OffersRoute
+  '/restaurant': typeof RestaurantRoute
+  '/rooms': typeof RoomsRoute
+  '/testimonials': typeof TestimonialsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/book-now'
+    | '/contact'
+    | '/experiences'
+    | '/faq'
+    | '/gallery'
+    | '/jibhi'
+    | '/kasol'
+    | '/nearby-attractions'
+    | '/offers'
+    | '/restaurant'
+    | '/rooms'
+    | '/testimonials'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/book-now'
+    | '/contact'
+    | '/experiences'
+    | '/faq'
+    | '/gallery'
+    | '/jibhi'
+    | '/kasol'
+    | '/nearby-attractions'
+    | '/offers'
+    | '/restaurant'
+    | '/rooms'
+    | '/testimonials'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/book-now'
+    | '/contact'
+    | '/experiences'
+    | '/faq'
+    | '/gallery'
+    | '/jibhi'
+    | '/kasol'
+    | '/nearby-attractions'
+    | '/offers'
+    | '/restaurant'
+    | '/rooms'
+    | '/testimonials'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BookNowRoute: typeof BookNowRoute
+  ContactRoute: typeof ContactRoute
+  ExperiencesRoute: typeof ExperiencesRoute
+  FaqRoute: typeof FaqRoute
+  GalleryRoute: typeof GalleryRoute
+  JibhiRoute: typeof JibhiRoute
+  KasolRoute: typeof KasolRoute
+  NearbyAttractionsRoute: typeof NearbyAttractionsRoute
+  OffersRoute: typeof OffersRoute
+  RestaurantRoute: typeof RestaurantRoute
+  RoomsRoute: typeof RoomsRoute
+  TestimonialsRoute: typeof TestimonialsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/testimonials': {
+      id: '/testimonials'
+      path: '/testimonials'
+      fullPath: '/testimonials'
+      preLoaderRoute: typeof TestimonialsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rooms': {
+      id: '/rooms'
+      path: '/rooms'
+      fullPath: '/rooms'
+      preLoaderRoute: typeof RoomsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/restaurant': {
+      id: '/restaurant'
+      path: '/restaurant'
+      fullPath: '/restaurant'
+      preLoaderRoute: typeof RestaurantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/offers': {
+      id: '/offers'
+      path: '/offers'
+      fullPath: '/offers'
+      preLoaderRoute: typeof OffersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nearby-attractions': {
+      id: '/nearby-attractions'
+      path: '/nearby-attractions'
+      fullPath: '/nearby-attractions'
+      preLoaderRoute: typeof NearbyAttractionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kasol': {
+      id: '/kasol'
+      path: '/kasol'
+      fullPath: '/kasol'
+      preLoaderRoute: typeof KasolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/jibhi': {
+      id: '/jibhi'
+      path: '/jibhi'
+      fullPath: '/jibhi'
+      preLoaderRoute: typeof JibhiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experiences': {
+      id: '/experiences'
+      path: '/experiences'
+      fullPath: '/experiences'
+      preLoaderRoute: typeof ExperiencesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book-now': {
+      id: '/book-now'
+      path: '/book-now'
+      fullPath: '/book-now'
+      preLoaderRoute: typeof BookNowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +317,19 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BookNowRoute: BookNowRoute,
+  ContactRoute: ContactRoute,
+  ExperiencesRoute: ExperiencesRoute,
+  FaqRoute: FaqRoute,
+  GalleryRoute: GalleryRoute,
+  JibhiRoute: JibhiRoute,
+  KasolRoute: KasolRoute,
+  NearbyAttractionsRoute: NearbyAttractionsRoute,
+  OffersRoute: OffersRoute,
+  RestaurantRoute: RestaurantRoute,
+  RoomsRoute: RoomsRoute,
+  TestimonialsRoute: TestimonialsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
