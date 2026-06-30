@@ -1,29 +1,32 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { HomePage, SeoJsonLd } from "@/components/site/moksha-site";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Moksha Cottages — Luxury Mountain Retreat in Chalal" },
+      {
+        name: "description",
+        content:
+          "Discover Moksha Cottages, a luxury mountain retreat in Chalal with premium wooden cottages, cinematic views, fine dining, and immersive experiences.",
+      },
+      { property: "og:title", content: "Moksha Cottages — Luxury Mountain Retreat in Chalal" },
+      {
+        property: "og:description",
+        content:
+          "Luxury wooden cottages, cinematic mountain views, boutique dining, and elevated stays in the Parvati Valley.",
+      },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <SeoJsonLd />
+      <HomePage />
+    </>
   );
 }

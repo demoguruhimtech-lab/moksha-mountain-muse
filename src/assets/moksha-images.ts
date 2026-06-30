@@ -1,0 +1,21 @@
+import exteriorDayAsset from "@/assets/moksha-exterior-day.asset.json";
+import roomWindowAsset from "@/assets/moksha-room-window.asset.json";
+import roomWarmAsset from "@/assets/moksha-room-warm.asset.json";
+import cottagesNightAsset from "@/assets/moksha-cottages-night.asset.json";
+import foodSunsetAsset from "@/assets/moksha-food-sunset.asset.json";
+import viewSignAsset from "@/assets/moksha-view-sign.asset.json";
+import breakfastViewAsset from "@/assets/moksha-breakfast-view.asset.json";
+import roomMasterAsset from "@/assets/moksha-room-master.asset.json";
+import bathroomAsset from "@/assets/moksha-bathroom.asset.json";
+import mountainCloudsAsset from "@/assets/moksha-mountain-clouds.asset.json";
+
+export const exteriorDay = exteriorDayAsset.url;
+export const roomWindow = roomWindowAsset.url;
+export const roomWarm = roomWarmAsset.url;
+export const cottagesNight = cottagesNightAsset.url;
+export const foodSunset = foodSunsetAsset.url;
+export const viewSign = viewSignAsset.url;
+export const breakfastView = breakfastViewAsset.url;
+export const roomMaster = roomMasterAsset.url;
+export const bathroom = bathroomAsset.url;
+export const mountainClouds = mountainCloudsAsset.url;
